@@ -1,0 +1,33 @@
+.colores {
+  color: #410509;
+  color: #ffffff;
+  color: #010115;
+  color: #680a10;
+}
+
+body {
+  background: #010115;
+  color: #ffffff;
+}
+
+.rows {
+  display: flex;
+  padding-block: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  flex-wrap: nowrap;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(2, 2, 37);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #680a10;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #410509;
+}

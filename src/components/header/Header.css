@@ -1,0 +1,16 @@
+.header {
+  background-color: #410509;
+}
+.svg {
+  width: 60px;
+}
+.text-icon {
+  font-size: 25px;
+  font-weight: bold;
+}
+.link {
+  color: #ffffff;
+}
+.link:hover {
+  color: #ffffffab;
+}
