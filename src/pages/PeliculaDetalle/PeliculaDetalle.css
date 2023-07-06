@@ -77,3 +77,27 @@
   margin: 15px;
   font-size: 1.1rem;
 }
+
+.card-favourite {
+  align-self: center;
+  width: 40%;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.card-favourite:hover {
+  transform: scale(1.1);
+  border: 1px solid white;
+}
+.card-favourite:hover .favourite {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.favourite {
+  background-color: black;
+  color: white;
+  transition: 0.5s ease;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  padding: 10px;
+}

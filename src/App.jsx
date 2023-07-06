@@ -46,7 +46,16 @@ function App() {
               />
             }
           />
-          <Route path='/pelicula/:peliculaId' element={<PeliculaDetalle />} />
+          <Route
+            path='/pelicula/:peliculaId'
+            element={
+              <PeliculaDetalle
+                removeFavouriteMovie={removeFavouriteMovie}
+                handleFavouriteClick={addFavouriteMovie}
+                favourites={favourites}
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>

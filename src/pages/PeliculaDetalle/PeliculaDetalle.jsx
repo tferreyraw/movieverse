@@ -9,7 +9,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Card from "react-bootstrap/Card";
 import "./PeliculaDetalle.css";
 
-export const PeliculaDetalle = () => {
+export const PeliculaDetalle = ({
+  favourites,
+  handleFavouriteClick,
+  removeFavouriteMovie,
+}) => {
   const [pelicula, setPelicula] = useState(null);
 
   const { peliculaId } = useParams();
@@ -26,6 +30,9 @@ export const PeliculaDetalle = () => {
 
   const imgURL = `https://image.tmdb.org/t/p/w300${pelicula.poster_path}`;
 
+  const isFavourite = favourites.some(
+    (curr) => peliculaId === curr.id.toString()
+  );
   return (
     <Container fluid className='contenedorDetalle text-white mb-3 mt-3'>
       <div className='title-container'>
@@ -127,6 +134,38 @@ export const PeliculaDetalle = () => {
                 </strong>
               </ListGroup.Item>
             </ListGroup>
+
+            <Card className='card-favourite mt-3'>
+              <Card.Body
+                className=' favourite'
+                onClick={() =>
+                  isFavourite
+                    ? removeFavouriteMovie(pelicula.id)
+                    : handleFavouriteClick(pelicula)
+                }
+              >
+                <span className=' px-2'>
+                  {" "}
+                  {isFavourite
+                    ? "Quitar de favoritos"
+                    : "Agregar a favoritos"}{" "}
+                </span>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='16'
+                  height='16'
+                  fill={isFavourite ? "transparent" : "red"}
+                  className='bi bi-heart-fill'
+                  viewBox='0 0 16 16'
+                  stroke={isFavourite ? "red" : "trasparent"}
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z'
+                  />
+                </svg>
+              </Card.Body>
+            </Card>
           </div>
         </Col>
       </Row>
