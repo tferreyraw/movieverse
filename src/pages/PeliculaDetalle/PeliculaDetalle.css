@@ -1,10 +1,11 @@
 .contenedorDetalle {
   width: 80%;
-  position: flex;
-  border: 2px solid black;
   border-radius: 20px;
-  background-color: #680a10;
-  border: 1px solid rgba(104, 10, 16, 0.5);
+  background: #680a10;
+  background-image: url("./background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: difference;
 }
 .title-container {
   display: flex;
@@ -23,9 +24,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 50px;
+  min-height: 35px;
   border: 1px solid rgba(104, 10, 16, 0.5);
-  border-radius: 50px;
+  border-radius: 5px;
   background-color: #010115;
   margin-block: auto;
 
@@ -70,7 +71,7 @@
   height: auto;
   width: 100%;
   border-radius: 15px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .peliculaDetalle {
